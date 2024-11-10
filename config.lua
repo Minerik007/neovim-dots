@@ -8,7 +8,6 @@ vim.opt.tabstop = 4 -- insert 2 spaces for a tab
 vim.opt.clipboard = "unnamedplus"
 
 lvim.colorscheme = "catppuccin-mocha"
-
 lvim.transparent_window = true
 
 lvim.plugins = {
