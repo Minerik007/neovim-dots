@@ -18,3 +18,4 @@ vim.opt.whichwrap:append("<,>,[,],h,l")
 vim.opt.undofile = true  -- Enable undofile
 vim.opt.undodir = os.getenv("HOME") .. "/.local/share/nvim/undo"  -- Set the directory for undo files
 vim.opt.undolevels = 1000  -- Set the maximum number of undo levels
+

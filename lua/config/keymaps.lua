@@ -6,7 +6,8 @@ local telescope = require('telescope.builtin')
 wk.add({
     { "<leader>f", desc = "Telescope" },
     { "<leader>c", desc = "LSP" },
-    { "<leader>g", desc = "git" }
+    { "<leader>g", desc = "git" },
+    { "<leader>l", desc = "Lazy" }
 })
 
 -- Define keymaps
@@ -25,7 +26,7 @@ vim.keymap.set('n', '<leader>e', ':Neotree toggle<CR>', { desc = 'Toggle Neo-tre
 vim.keymap.set('n', '<leader>d', ':Neotree focus<CR>', { desc = 'Focus Neo-tree' })
 
 -- Quit NeoVim
-vim.keymap.set('n', '<leader>q', ':confirm qa<CR>', { desc = 'Quit NeoVim' })
+vim.keymap.set('n', '<leader>q', ':confirm q<CR>', { desc = 'Quit NeoVim' })
 
 -- Keep visual mode active after indenting
 vim.keymap.set('v', '>', '>gv', { noremap = true, silent = true })
@@ -38,3 +39,6 @@ vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, { desc = 'Code action
 
 -- LazyGit
 vim.keymap.set('n', '<leader>gg', ':LazyGit<CR>', { desc = "LazyGit" })
+
+-- Lazy
+vim.keymap.set('n', '<leader>ll', ':Lazy<CR>', { desc = "Lazy" })
