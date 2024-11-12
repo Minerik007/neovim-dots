@@ -5,6 +5,7 @@ return {
         "williamboman/mason-lspconfig.nvim",
         config = function()
             local lspconfig = require('lspconfig')
+            local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
             require('mason').setup({})
             require('mason-lspconfig').setup({
@@ -13,7 +14,9 @@ return {
 
             require('mason-lspconfig').setup_handlers({
               function(server)
-                lspconfig[server].setup({})
+                    lspconfig[server].setup({
+                        capabalities = capabalities
+                    })
               end,
             })
         end
