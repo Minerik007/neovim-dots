@@ -1,21 +1,23 @@
-vim.g.mapleader = " " -- leader key
-vim.g.maplocalleader = "\\"
+-- User Configuration
 
-vim.opt.expandtab = true
-vim.opt.shiftwidth = 4 -- the number of spaces inserted for each indentation
-vim.opt.tabstop = 4 -- insert 4 spaces for a tab
-vim.opt.smartindent = true
+-- Godot Debbuger
+local dap = require('dap')
+dap.adapters.godot = {
+  type = "server",
+  host = '127.0.0.1',
+  port = 6006,
+}
 
-vim.opt.clipboard = "unnamedplus" -- clipboard sync
-vim.opt.confirm = true
-vim.opt.wrap = false
-vim.opt.number = true
+dap.configurations.gdscript = {
+  {
+    type = "godot",
+    request = "launch",
+    name = "Launch scene",
+    project = "${workspaceFolder}",
+  }
+}
 
--- Move to last character of previous line
-vim.opt.whichwrap:append("<,>,[,],h,l")
-
--- Enable persistent undo
-vim.opt.undofile = true  -- Enable undofile
-vim.opt.undodir = os.getenv("HOME") .. "/.local/share/nvim/undo"  -- Set the directory for undo files
-vim.opt.undolevels = 1000  -- Set the maximum number of undo levels
+require'lspconfig'.gdscript.setup{
+  filetypes = { "gd", "gdscript", "gdscript3" },
+}
 
