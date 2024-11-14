@@ -10,9 +10,13 @@ return {
         }
     },
     {
+        'onsails/lspkind.nvim',
+    },
+    {
         'hrsh7th/nvim-cmp',
         config = function()
             local cmp = require'cmp'
+            local lspkind = require('lspkind')
             require("luasnip.loaders.from_vscode").lazy_load()
 
             cmp.setup({
@@ -35,9 +39,30 @@ return {
                 sources = cmp.config.sources({
                     { name = 'nvim_lsp' },
                     { name = 'luasnip' }, -- For luasnip users.
+                    { name = 'codeium' },
                 }, {
                     { name = 'buffer' },
-                })
+                }),
+                formatting = {
+                    format = lspkind.cmp_format({
+                        mode = 'symbol_text', -- show only symbol annotations
+                        maxwidth = 25,
+                        ellipsis_char = '...', -- when popup menu exceed maxwidth, the truncated part would show ellipsis_char instead (must define maxwidth first)
+                        show_labelDetails = true, -- show labelDetails in menu. Disabled by default
+                        symbol_map = { Codeium = "" },
+                        menu = ({
+                            buffer = "[Buffer]",
+                            nvim_lsp = "[LSP]",
+                            luasnip = "[LuaSnip]",
+                            nvim_lua = "[Lua]",
+                            latex_symbols = "[Latex]",
+                            codeium = "[Codeium]",
+                        }),
+                        before = function (entry, vim_item)
+                            return vim_item
+                        end
+                    })
+                }
             })
         end
     }
