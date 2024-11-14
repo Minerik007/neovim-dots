@@ -28,6 +28,8 @@ map('n', '<C-.>', '<Cmd>BufferNext<CR>', { desc = 'Next Tab', silent = true })
 map('n', '<A-,>', '<Cmd>BufferMovePrevious<CR>', { desc = 'Move Tab Left', silent = true })
 map('n', '<A-.>', '<Cmd>BufferMoveNext<CR>', { desc = 'Move Tab Right', silent = true })
 map('n', '<leader>tc', '<Cmd>BufferClose<CR>', { desc = 'Close Tab', silent = true })
+map('n', '<leader>tt', ':ToggleTerm<CR>', { desc = "Open terminal", silent = true })
+map('n', '<leader>tf', ':ToggleTerm direction=float<CR>', { desc = "Open floating terminal", silent = true })
 
 -- Save file
 map('n', '<leader>w', ':w<CR>', { desc = 'Save file', silent = true })
