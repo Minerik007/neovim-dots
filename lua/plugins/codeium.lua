@@ -1,4 +1,4 @@
-if true then return {} end
+if true then return {} end -- distabled by default. Remove this line to enable it.
 
 return {
     "Exafunction/codeium.nvim",
