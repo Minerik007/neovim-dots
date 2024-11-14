@@ -56,7 +56,7 @@ map('n', '<leader>gg', ':LazyGit<CR>', { desc = "LazyGit", silent = true })
 
 -- Lazy
 map('n', '<leader>ll', ':Lazy<CR>', { desc = "Lazy", silent = true })
-map('n', '<leader>lc', ':Lazy clean<CR>', { desc = "Lazy clean", silent = true })
+map('n', '<leader>lx', ':Lazy clean<CR>', { desc = "Lazy clean", silent = true })
 map('n', '<leader>lu', ':Lazy update<CR>', { desc = "Lazy update", silent = true })
 map('n', '<leader>li', ':Lazy install<CR>', { desc = "Lazy install", silent = true })
 map('n', '<leader>ls', ':Lazy sync<CR>', { desc = "Lazy sync", silent = true })
