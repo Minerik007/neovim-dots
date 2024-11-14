@@ -40,7 +40,7 @@ map('n', '<leader>r', ':Neotree focus<CR>', { desc = 'Focus Neo-tree', silent = 
 map('n', '<leader>;', ':Neotree close<CR> :Alpha<CR>', { desc = 'Open Dashboard', silent = true })
 
 -- Quit NeoVim
-map('n', '<leader>q', ':Neotree close<CR> :confirm q<CR>', { desc = 'Quit NeoVim', silent = true })
+map('n', '<leader>q', ':Neotree close<CR> :confirm q<CR>', { desc = 'Quit NeoVim' })
 
 -- Keep visual mode active after indenting
 map('v', '>', '>gv', { noremap = true, silent = true })
