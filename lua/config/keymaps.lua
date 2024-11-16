@@ -23,11 +23,11 @@ map('n', '<leader>fb', telescope.buffers, { desc = 'Telescope buffers', silent =
 map('n', '<leader>fh', telescope.help_tags, { desc = 'Telescope help tags', silent = true })
 
 -- Tabs
-map('n', '<C-,>', '<Cmd>BufferPrevious<CR>', { desc = 'Previous Tab', silent = true })
-map('n', '<C-.>', '<Cmd>BufferNext<CR>', { desc = 'Next Tab', silent = true })
-map('n', '<A-,>', '<Cmd>BufferMovePrevious<CR>', { desc = 'Move Tab Left', silent = true })
-map('n', '<A-.>', '<Cmd>BufferMoveNext<CR>', { desc = 'Move Tab Right', silent = true })
-map('n', '<leader>tc', '<Cmd>BufferClose<CR>', { desc = 'Close Tab', silent = true })
+map('n', '<C-,>', ':BufferLineCyclePrev<CR>', { desc = 'Previous Tab', silent = true })
+map('n', '<C-.>', ':BufferLineCycleNext<CR>', { desc = 'Next Tab', silent = true })
+map('n', '<A-,>', ':BufferLineMovePrev<CR>', { desc = 'Move Tab Left', silent = true })
+map('n', '<A-.>', ':BufferLineMoveNext<CR>', { desc = 'Move Tab Right', silent = true })
+map('n', '<leader>tc', ':BufDel<CR>', { desc = 'Close Tab', silent = true })
 map('n', '<leader>tt', ':ToggleTerm<CR>', { desc = "Open terminal", silent = true })
 map('n', '<leader>tf', ':ToggleTerm direction=float<CR>', { desc = "Open floating terminal", silent = true })
 
