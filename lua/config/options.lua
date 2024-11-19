@@ -1,5 +1,9 @@
 -- User Configuration
 
+-- Colorscheme 
+vim.cmd.colorscheme "catppuccin"
+-- To add colorschemes go to nvim/lua/plugins/colorschemes.lua and add plugin for your colorscheme
+
 -- Debbugers
 local dap = require('dap')
 
