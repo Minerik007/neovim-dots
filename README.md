@@ -3,10 +3,7 @@ My awesome Neovim config ✨
 
 # Instalation for Linux:
 ```bash
-cd ~/.config/nvim
-```
-```bash
-git clone https://github.com/Minerik007/neovim-dots
+cd ~/.config/nvim & git clone https://github.com/Minerik007/neovim-dots
 ```
 
 # Debbugers
