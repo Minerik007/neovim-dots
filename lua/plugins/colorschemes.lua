@@ -1,8 +1,7 @@
 return {
     "catppuccin/nvim",
     "ellisonleao/gruvbox.nvim",
+    -- To add colorschemes plugins here
+
     priority = 1000,
-    config = function()
-        vim.cmd.colorscheme "catppuccin"
-    end
 }

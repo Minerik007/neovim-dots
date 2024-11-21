@@ -1,6 +1,9 @@
 -- User Configuration
 
 -- Colorscheme 
+require("catppuccin").setup({
+    transparent_background = false,
+})
 vim.cmd.colorscheme "catppuccin"
 -- To add colorschemes go to nvim/lua/plugins/colorschemes.lua and add plugin for your colorscheme
 
