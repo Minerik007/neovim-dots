@@ -10,6 +10,8 @@ vim.opt.clipboard = "unnamedplus" -- clipboard sync
 vim.opt.confirm = true
 vim.opt.wrap = false
 vim.opt.number = true
+vim.wo.relativenumber = true -- relative numbers
+
 
 -- Move to last character of previous line
 vim.opt.whichwrap:append("<,>,[,],h,l")
