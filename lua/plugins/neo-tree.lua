@@ -12,8 +12,9 @@ return {
     		close_if_last_window = true,
     		window = {
     			width = 30,
+                position = "right",
     			mappings = {
-    				["<space>"] = "noop", 
+    				["<space>"] = "noop",
     			}
     		},
             default_component_configs = {
