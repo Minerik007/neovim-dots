@@ -7,7 +7,8 @@ Dependencies:
  - tree-sitter-cli
  - lazygit (optional but recommended if you want to use it with github)
 
-You need to install these dependencies or my config will not work as expected.
+> [!WARNING]
+> You need to install these dependencies or my config will not work as expected.
 
 ### Make a backup of your current neovim files.
 ```bash
