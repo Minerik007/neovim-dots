@@ -5,7 +5,7 @@ My awesome Neovim config ✨
 Dependencies:
  - Nerd Font
  - tree-sitter-cli
- - lazygit (optional but recommended if you want to use it with github)
+ - lazygit (optional but recommended if you want to use github)
 
 > [!WARNING]
 > You need to install these dependencies or my config will not work as expected.
