@@ -3,7 +3,7 @@ My awesome Neovim config ✨
 
 # Instalation for Linux:
 ```bash
-cd ~/.config/nvim & git clone https://github.com/Minerik007/neovim-dots
+cd ~/.config/nvim & git clone https://github.com/Minerik007/neovim-dots .
 ```
  > **_NOTE:_** You will maybe need to install lazygit for it´s functionality to work
 
