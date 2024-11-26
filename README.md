@@ -9,7 +9,7 @@ Dependencies:
 
 You need to install these dependencies or my config will not work as expected.
 
-Make a backup of your current neovim files.
+### Make a backup of your current neovim files.
 ```bash
 # required
 mv ~/.config/nvim{,.bak}
@@ -20,12 +20,12 @@ mv ~/.local/state/nvim{,.bak}
 mv ~/.cache/nvim{,.bak}
 ```
 
-Clone my config.
+### Clone my config.
 ```bash
 cd ~/.config/nvim & git clone https://github.com/Minerik007/neovim-dots .
 ```
 
-Remove the `.git`  folder, so you can add it to your own repo later
+### Remove the `.git`  folder, so you can add it to your own repo later
 ```bash
 rm -rf ~/.config/nvim/.git
 ```
