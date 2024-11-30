@@ -31,3 +31,7 @@ vim.fn.sign_define("DiagnosticSignHint",{text = "󰌵", texthl = "DiagnosticSign
 
 vim.cmd("hi DapBreakpointColor guifg=#fa4848")
 vim.fn.sign_define("DapBreakpoint", { text = "", texthl = "DapBreakpointColor", linehl = "", numhl = "" })
+
+vim.filetype.add({
+  pattern = { [".*/hypr/.*%.conf"] = "hyprlang" },
+})
