@@ -36,4 +36,4 @@ And now you can start Neovim.
 If you encounter any issues please [report it](https://github.com/Minerik007/neovim-dots/issues/new) 
 
 # Debbugers
-The [Debug-Adapter Installation](https://github.com/mfussenegger/nvim-dap/wiki/Debug-Adapter-installation) wiki is beautiful guide for installation and configuration of debbugers. Configuration please put into user options file. It is located in 'nvim/lua/config/options.lua'
+The [Debug-Adapter Installation](https://github.com/mfussenegger/nvim-dap/wiki/Debug-Adapter-installation) wiki is beautiful guide for installation and configuration of debbugers. Configuration please put into user options file. It is located in 'nvim/lua/config/options.lua'. And if you want only code snippets with LSP use ':Mason' command and select your prefered LSP.
