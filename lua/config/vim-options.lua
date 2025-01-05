@@ -10,7 +10,7 @@ vim.opt.clipboard = "unnamedplus" -- clipboard sync
 vim.opt.confirm = true
 vim.opt.wrap = false
 vim.opt.number = true
-vim.wo.relativenumber = true -- relative numbers
+vim.opt.relativenumber = true -- relative numbers
 
 
 -- Move to last character of previous line
@@ -35,3 +35,12 @@ vim.fn.sign_define("DapBreakpoint", { text = "", texthl = "DapBreakpointColor
 vim.filetype.add({
   pattern = { [".*/hypr/.*%.conf"] = "hyprlang" },
 })
+
+vim.api.nvim_create_autocmd("CursorMoved", {
+    pattern = "*.md",
+    callback = function()
+        print("Markdown buffer entered")
+        vim.wo.wrap = true
+    end,
+})
+
