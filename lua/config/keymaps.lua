@@ -34,6 +34,9 @@ map('n', '<leader>tf', ':ToggleTerm direction=float<CR>', { desc = "Open floatin
 -- Save file
 map('n', '<leader>w', ':w<CR>', { desc = 'Save file', silent = true })
 
+-- Screenshot
+map('v', '<leader>s', function() require("nvim-silicon").clip() end, { desc = 'Screenshot Code', silent = true })
+
 -- Neo-tree
 map('n', '<leader>e', ':Neotree toggle<CR>', { desc = 'Toggle Neo-tree', silent = true })
 map('n', '<leader>r', ':Neotree focus<CR>', { desc = 'Focus Neo-tree', silent = true })
