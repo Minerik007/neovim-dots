@@ -39,7 +39,6 @@ vim.filetype.add({
 vim.api.nvim_create_autocmd("CursorMoved", {
     pattern = "*.md",
     callback = function()
-        print("Markdown buffer entered")
         vim.wo.wrap = true
     end,
 })
