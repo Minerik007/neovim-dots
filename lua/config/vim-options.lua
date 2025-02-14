@@ -36,10 +36,11 @@ vim.filetype.add({
   pattern = { [".*/hypr/.*%.conf"] = "hyprlang" },
 })
 
-vim.api.nvim_create_autocmd("CursorMoved", {
+vim.api.nvim_create_autocmd("BufEnter", {
     pattern = "*.md",
     callback = function()
         vim.wo.wrap = true
+        vim.wo.linebreak = true
     end,
 })
 
