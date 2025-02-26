@@ -21,6 +21,7 @@ map('n', '<leader>ff', telescope.find_files, { desc = 'Telescope find files', si
 map('n', '<leader>fg', telescope.live_grep, { desc = 'Telescope live grep', silent = true })
 map('n', '<leader>fb', telescope.buffers, { desc = 'Telescope buffers', silent = true })
 map('n', '<leader>fh', telescope.help_tags, { desc = 'Telescope help tags', silent = true })
+map('n', '<leader>ft', ':TodoTelescope<CR>', { desc = 'Telescope todo comments', silent = true })
 
 -- Tabs
 map('n', '<C-,>', ':BufferLineCyclePrev<CR>', { desc = 'Previous Tab', silent = true })
