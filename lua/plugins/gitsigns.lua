@@ -1,6 +1,7 @@
 return {
-    "lewis6991/gitsigns.nvim",
+    'echasnovski/mini.nvim',
+    version = '*',
     config = function ()
-        require('gitsigns').setup()
+        require('mini.diff').setup()
     end
 }
