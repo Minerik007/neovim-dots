@@ -24,10 +24,6 @@ map('n', '<leader>fh', telescope.help_tags, { desc = 'Telescope help tags', sile
 map('n', '<leader>ft', ':TodoTelescope<CR>', { desc = 'Telescope todo comments', silent = true })
 
 -- Tabs
-map('n', '<C-,>', ':BufferLineCyclePrev<CR>', { desc = 'Previous Tab', silent = true })
-map('n', '<C-.>', ':BufferLineCycleNext<CR>', { desc = 'Next Tab', silent = true })
-map('n', '<A-,>', ':BufferLineMovePrev<CR>', { desc = 'Move Tab Left', silent = true })
-map('n', '<A-.>', ':BufferLineMoveNext<CR>', { desc = 'Move Tab Right', silent = true })
 map('n', '<leader>tc', ':BufDel<CR>', { desc = 'Close Tab', silent = true })
 map('n', '<leader>tt', ':ToggleTerm<CR>', { desc = "Open terminal", silent = true })
 map('n', '<leader>tf', ':ToggleTerm direction=float<CR>', { desc = "Open floating terminal", silent = true })
