@@ -7,6 +7,7 @@ Dependencies:
  - tree-sitter-cli
  - playerctl
  - lazygit (optional but recommended if you want to use github)
+ - fortune (optional)
 
 > [!WARNING]
 > You need to install these dependencies or my config will not work as expected.
@@ -31,6 +32,20 @@ cd ~/.config/nvim & git clone https://github.com/Minerik007/neovim-dots .
 ```bash
 rm -rf ~/.config/nvim/.git
 ```
+### AI (optional)
+If you want AI virtual text you need to download Llama.cpp
+```Arch Linux
+yay -Sy llama.cpp-vulkan
+```
+Then run this command to download and run AI.
+```bash
+llama-server \
+          -hf ggml-org/Qwen2.5-Coder-1.5B-Q8_0-GGUF \
+          -ngl 99 -fa -ub 1024 -b 1024 \
+          --ctx-size 0 --cache-reuse 256
+```
+> [!WARNING]
+> Maybe you need to change llama-server settings to match your setup. It can cause system freeze or lag otherwise.
 
 And now you can start Neovim.
 If you encounter any issues please [report it](https://github.com/Minerik007/neovim-dots/issues/new) 
