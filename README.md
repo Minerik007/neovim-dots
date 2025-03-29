@@ -34,7 +34,7 @@ rm -rf ~/.config/nvim/.git
 ```
 ### AI (optional)
 If you want AI virtual text you need to download Llama.cpp
-```Arch Linux
+```bash
 yay -Sy llama.cpp-vulkan
 ```
 Then run this command to download and run AI.
