@@ -41,10 +41,14 @@ return {
                 sources = cmp.config.sources({
                     { name = 'nvim_lsp' },
                     { name = 'luasnip' }, -- For luasnip users.
+                    -- { name = 'minuet', priority = 10 },
                     { name = 'codeium' },
                 }, {
                     { name = 'buffer' },
                 }),
+                performance = {
+                    fetching_timeout = 2000,
+                },
                 formatting = {
                     format = lspkind.cmp_format({
                         mode = 'symbol_text', -- show only symbol annotations
@@ -59,6 +63,7 @@ return {
                             nvim_lua = "[Lua]",
                             latex_symbols = "[Latex]",
                             codeium = "[Codeium]",
+                            minuet = "[Minuet]",
                         }),
                         before = function (entry, vim_item)
                             return vim_item

@@ -11,7 +11,7 @@ wk.add({
     { "<leader>g", desc = "git" },
     { "<leader>l", desc = "Lazy" },
     { "<leader>t", desc = "Tabs"},
-    { "<leader>d", desc = "Debug"}
+    { "<leader>d", desc = "Debug"},
 })
 
 -- Define keymaps
@@ -24,9 +24,15 @@ map('n', '<leader>fh', telescope.help_tags, { desc = 'Telescope help tags', sile
 map('n', '<leader>ft', ':TodoTelescope<CR>', { desc = 'Telescope todo comments', silent = true })
 
 -- Tabs
-map('n', '<leader>tc', ':BufDel<CR>', { desc = 'Close Tab', silent = true })
 map('n', '<leader>tt', ':ToggleTerm<CR>', { desc = "Open terminal", silent = true })
 map('n', '<leader>tf', ':ToggleTerm direction=float<CR>', { desc = "Open floating terminal", silent = true })
+
+-- AI
+map('i', '<M-a>', require('minuet.virtualtext').action.accept, { desc = 'Accept', silent = true })
+map('i', '<M-]>', require('minuet.virtualtext').action.next, { desc = 'Next', silent = true })
+map('i', '<M-[>', require('minuet.virtualtext').action.prev, { desc = 'Previous', silent = true })
+map('i', '<M-z>', require('minuet.virtualtext').action.accept_n_lines, { desc = 'Accept n lines', silent = true })
+map('i', '<M-e>', require('minuet.virtualtext').action.dismiss, { desc = 'Dismiss', silent = true })
 
 -- Save file
 map('n', '<leader>w', ':w<CR>', { desc = 'Save file', silent = true })
