@@ -1,7 +1,7 @@
 -- User Configuration
 
 -- Colorscheme
-if false then -- toggle transparency
+if true then -- toggle transparency
     require("catppuccin").setup({
         transparent_background = true,
     })
