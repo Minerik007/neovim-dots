@@ -5,6 +5,9 @@ if true then -- toggle transparency
     require("catppuccin").setup({
         transparent_background = true,
     })
+    require("notify").setup({
+        background_colour = "#000000",
+    })
 end
 vim.cmd.colorscheme "catppuccin"
 -- To add colorschemes go to nvim/lua/plugins/colorschemes.lua and add plugin for your colorscheme
