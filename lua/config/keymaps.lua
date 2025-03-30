@@ -22,6 +22,7 @@ map('n', '<leader>fg', telescope.live_grep, { desc = 'Telescope live grep', sile
 map('n', '<leader>fb', telescope.buffers, { desc = 'Telescope buffers', silent = true })
 map('n', '<leader>fh', telescope.help_tags, { desc = 'Telescope help tags', silent = true })
 map('n', '<leader>ft', ':TodoTelescope<CR>', { desc = 'Telescope todo comments', silent = true })
+map('n', '<leader>fb', ":Telescope file_browser<CR>", { desc = 'Telescope file browser', silent = true })
 
 -- Tabs
 map('n', '<leader>tt', ':ToggleTerm<CR>', { desc = "Open terminal", silent = true })
@@ -40,12 +41,8 @@ map('n', '<leader>w', ':w<CR>', { desc = 'Save file', silent = true })
 -- Screenshot
 map('v', '<leader>s', function() require("nvim-silicon").clip() end, { desc = 'Screenshot Code', silent = true })
 
--- Neo-tree
-map('n', '<leader>e', ':Neotree toggle<CR>', { desc = 'Toggle Neo-tree', silent = true })
-map('n', '<leader>r', ':Neotree focus<CR>', { desc = 'Focus Neo-tree', silent = true })
-
 -- Open Dashboard
-map('n', '<leader>;', ':Neotree close<CR> :Alpha<CR>', { desc = 'Open Dashboard', silent = true })
+map('n', '<leader>;', ':Alpha<CR>', { desc = 'Open Dashboard', silent = true })
 
 -- Quit NeoVim
 map('n', '<leader>q', ':confirm qa<CR>', { desc = 'Quit NeoVim' })

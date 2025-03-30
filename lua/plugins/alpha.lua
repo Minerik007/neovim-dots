@@ -41,11 +41,12 @@ return {
         dashboard.section.header.opts.hl = "Directory"
         dashboard.section.buttons.val = {
             dashboard.button('n', '  New file', ':ene <BAR> startinsert <CR>'),
-            dashboard.button('f', '  Find file', ':Telescope find_files hidden=true no_ignore=true <CR>'),
+            dashboard.button('b', '󰷏 File browser', ':Telescope file_browser <CR>'),
+            dashboard.button('f', '  Find file', ':Telescope find_files <CR>'),
             dashboard.button('t', '  Find text', ':Telescope live_grep <CR>'),
             dashboard.button('r', '󰄉  Recent files', ':Telescope oldfiles <CR>'),
             dashboard.button('u', '󱐥  Update', '<cmd>Lazy update<CR>'),
-            dashboard.button('c', '  Config', ':cd $HOME/.config/nvim | silent Telescope find_files no_ignore=true<CR>'),
+            dashboard.button('c', '  Config', ':cd $HOME/.config/nvim | silent Telescope find_files <CR>'),
             dashboard.button('q', '󰿅  Quit', '<cmd>qa<CR>'),
         }
         local handle = io.popen("fortune -c | sed '2d'")
