@@ -12,6 +12,7 @@ wk.add({
     { "<leader>l", desc = "Lazy" },
     { "<leader>t", desc = "Tabs"},
     { "<leader>d", desc = "Debug"},
+    { "<leader>b", desc = "Buffers"}
 })
 
 -- Define keymaps
@@ -22,11 +23,16 @@ map('n', '<leader>fg', telescope.live_grep, { desc = 'Telescope live grep', sile
 map('n', '<leader>fb', telescope.buffers, { desc = 'Telescope buffers', silent = true })
 map('n', '<leader>fh', telescope.help_tags, { desc = 'Telescope help tags', silent = true })
 map('n', '<leader>ft', ':TodoTelescope<CR>', { desc = 'Telescope todo comments', silent = true })
-map('n', '<leader>fb', ":Telescope file_browser<CR>", { desc = 'Telescope file browser', silent = true })
+map('n', '<leader>fe', ":Telescope file_browser<CR>", { desc = 'Telescope file browser', silent = true })
 
 -- Tabs
 map('n', '<leader>tt', ':ToggleTerm<CR>', { desc = "Open terminal", silent = true })
 map('n', '<leader>tf', ':ToggleTerm direction=float<CR>', { desc = "Open floating terminal", silent = true })
+map('n', '<leader>tc', ':tabc<CR>', { desc = 'Close tab', silent = true })
+map('n', '<leader>tn', ':tabnew<CR>', { desc = 'New tab', silent = true })
+
+-- Buffers
+map('n', '<leader>bd', ':bd<CR>', { desc = 'Delete buffer', silent = true })
 
 -- AI
 map('i', '<M-a>', require('minuet.virtualtext').action.accept, { desc = 'Accept', silent = true })
