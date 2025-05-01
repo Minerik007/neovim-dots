@@ -4,7 +4,7 @@ return {
     cmd = "Silicon",
     main = "nvim-silicon",
     opts = {
-        font = "Lilex Nerd Font;Lilex",
+        font = "JetBrainsMono Nerd Font",
         theme = "Catppuccin Mocha",
         to_clipboard = true,
         background = "#11111b",
