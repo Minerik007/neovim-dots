@@ -1,5 +1,5 @@
 vim.g.mapleader = " " -- leader key
-vim.g.maplocalleader = "\\"
+vim.g.maplocalleader = "+"
 
 vim.opt.expandtab = true
 vim.opt.shiftwidth = 4 -- the number of spaces inserted for each indentation
@@ -24,16 +24,25 @@ vim.opt.undolevels = 1000  -- Set the maximum number of undo levels
 vim.cmd("highlight Comment cterm=italic gui=italic")
 
 -- Debugger icons
-vim.fn.sign_define("DiagnosticSignError", {text = " ", texthl = "DiagnosticSignError"})
-vim.fn.sign_define("DiagnosticSignWarn",{text = " ", texthl = "DiagnosticSignWarn"})
-vim.fn.sign_define("DiagnosticSignInfo",{text = " ", texthl = "DiagnosticSignInfo"})
-vim.fn.sign_define("DiagnosticSignHint",{text = "󰌵", texthl = "DiagnosticSignHint"})
+
+vim.diagnostic.config({
+    virtual_lines = true,
+    signs = {
+        text = {
+            [vim.diagnostic.severity.ERROR] = ' ',
+            [vim.diagnostic.severity.WARN] = ' ',
+            [vim.diagnostic.severity.HINT] = '󰌵',
+            [vim.diagnostic.severity.INFO] = ' ',
+        },
+    },
+    underline = true,
+})
 
 vim.cmd("hi DapBreakpointColor guifg=#fa4848")
 vim.fn.sign_define("DapBreakpoint", { text = "", texthl = "DapBreakpointColor", linehl = "", numhl = "" })
 
 vim.filetype.add({
-  pattern = { [".*/hypr/.*%.conf"] = "hyprlang" },
+    pattern = { [".*/hypr/.*%.conf"] = "hyprlang" },
 })
 
 vim.api.nvim_create_autocmd("CursorMoved", {

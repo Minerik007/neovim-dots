@@ -12,7 +12,7 @@ wk.add({
     { "<leader>l", desc = "Lazy" },
     { "<leader>t", desc = "Tabs"},
     { "<leader>d", desc = "Debug"},
-    { "<leader>b", desc = "Buffers"}
+    { "<leader>b", desc = "Buffers"},
 })
 
 -- Define keymaps
@@ -32,7 +32,7 @@ map('n', '<leader>tc', ':tabc<CR>', { desc = 'Close tab', silent = true })
 map('n', '<leader>tn', ':tabnew<CR>', { desc = 'New tab', silent = true })
 
 -- Buffers
-map('n', '<leader>bd', ':bd<CR>', { desc = 'Delete buffer', silent = true })
+map('n', '<leader>bd', ':bd<CR>', { desc = 'Delete  buffer', silent = true })
 
 -- AI
 map('i', '<M-a>', require('minuet.virtualtext').action.accept, { desc = 'Accept', silent = true })
@@ -44,13 +44,20 @@ map('i', '<M-e>', require('minuet.virtualtext').action.dismiss, { desc = 'Dismis
 -- Save file
 map('n', '<leader>w', ':w<CR>', { desc = 'Save file', silent = true })
 
+-- Neorg
+map('n', '<leader>n', ':Neorg workspace notes<CR>', { desc = 'Neorg Notes', silent = true })
+
+
 -- Screenshot
 map('v', '<leader>s', function() require("nvim-silicon").clip() end, { desc = 'Screenshot Code', silent = true })
+
+-- Make it rain!
+map('n', '<leader>z', ':CellularAutomaton make_it_rain<CR>', { desc = 'Make it rain!', silent = true })
 
 -- Open Dashboard
 map('n', '<leader>;', ':Alpha<CR>', { desc = 'Open Dashboard', silent = true })
 
--- Quit NeoVim
+-- Quit Neovim
 map('n', '<leader>q', ':confirm qa<CR>', { desc = 'Quit NeoVim' })
 
 -- Keep visual mode active after indenting
