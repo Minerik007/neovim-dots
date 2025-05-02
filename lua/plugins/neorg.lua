@@ -7,7 +7,6 @@ return {
             require("neorg").setup({
                 load = {
                     ["core.defaults"] = {},
-                    ["external.pandoc"] = {},
                     ["core.latex.renderer"] = {
                         config = {
                             conceal = true,
@@ -25,10 +24,5 @@ return {
                 },
             })
         end
-    },
-    {
-        "champignoom/norg-pandoc",
-        branch = "neorg-plugin",
-        config = true,
     },
 }
