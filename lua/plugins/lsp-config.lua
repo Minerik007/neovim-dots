@@ -9,15 +9,8 @@ return {
 
             require('mason').setup({})
             require('mason-lspconfig').setup({
-              ensure_installed = { 'lua_ls' }
-            })
-
-            require('mason-lspconfig').setup_handlers({
-              function(server)
-                    lspconfig[server].setup({
-                        capabalities = capabalities
-                    })
-              end,
+                automatic_enable = true,
+                ensure_installed = { 'lua_ls' }
             })
         end
     },
