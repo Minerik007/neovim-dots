@@ -24,9 +24,8 @@ vim.opt.undolevels = 1000  -- Set the maximum number of undo levels
 vim.cmd("highlight Comment cterm=italic gui=italic")
 
 -- Debugger icons
-
 vim.diagnostic.config({
-    virtual_lines = true,
+    virtual_text = true,
     signs = {
         text = {
             [vim.diagnostic.severity.ERROR] = ' ',
