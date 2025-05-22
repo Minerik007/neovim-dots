@@ -16,6 +16,10 @@ vim.opt.relativenumber = true -- relative numbers
 -- Move to last character of previous line
 vim.opt.whichwrap:append("<,>,[,],h,l")
 
+-- let j and k move up and down lines that have been wrapped
+vim.keymap.set("n", "j", "gj")
+vim.keymap.set("n", "k", "gk")
+
 -- Enable persistent undo
 vim.opt.undofile = true  -- Enable undofile
 vim.opt.undodir = os.getenv("HOME") .. "/.local/share/nvim/undo"  -- Set the directory for undo files
@@ -45,7 +49,7 @@ vim.filetype.add({
 })
 
 vim.api.nvim_create_autocmd("CursorMoved", {
-    pattern = "*.md",
+    pattern = {"*.md", "*.norg"},
     callback = function()
         vim.wo.wrap = true
         vim.wo.linebreak = true

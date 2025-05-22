@@ -24,6 +24,7 @@ map('n', '<leader>fb', telescope.buffers, { desc = 'Telescope buffers', silent =
 map('n', '<leader>fh', telescope.help_tags, { desc = 'Telescope help tags', silent = true })
 map('n', '<leader>ft', ':TodoTelescope<CR>', { desc = 'Telescope todo comments', silent = true })
 map('n', '<leader>fe', ":Telescope file_browser<CR>", { desc = 'Telescope file browser', silent = true })
+map('n', '<leader>fd', telescope.lsp_document_symbols, { desc = 'Telescope list symbols', silent = true })
 
 -- Tabs
 map('n', '<leader>tt', ':ToggleTerm<CR>', { desc = "Open terminal", silent = true })
