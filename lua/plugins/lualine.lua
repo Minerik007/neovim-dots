@@ -4,7 +4,7 @@ return {
 
     config = function()
         local function get_current_song()
-            local handle = io.popen('playerctl -s -p firefox metadata --format "{{ title }} - {{ artist }}"')
+            local handle = io.popen('playerctl -s metadata --format "{{ title }} - {{ artist }}"')
             local current_track = handle:read("*a")
             handle:close()
 

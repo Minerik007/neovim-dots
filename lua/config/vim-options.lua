@@ -12,6 +12,8 @@ vim.opt.wrap = false
 vim.opt.number = true
 vim.opt.relativenumber = true -- relative numbers
 
+vim.opt.foldmethod = "indent"
+vim.opt.foldlevel = 20
 
 -- Move to last character of previous line
 vim.opt.whichwrap:append("<,>,[,],h,l")
@@ -56,3 +58,7 @@ vim.api.nvim_create_autocmd("CursorMoved", {
     end,
 })
 
+vim.api.nvim_create_autocmd({"BufRead", "BufNewFile"}, {
+  pattern = {"*.str"},
+  command = "set filetype=javascript"
+})
