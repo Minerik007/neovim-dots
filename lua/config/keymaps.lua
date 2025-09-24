@@ -20,6 +20,7 @@ wk.add({
 -- Telescope
 map('n', '<leader>ff', telescope.find_files, { desc = 'Telescope find files', silent = true })
 map('n', '<leader>fg', telescope.live_grep, { desc = 'Telescope live grep', silent = true })
+map('n', '<leader>fv', ":lua require('telescope.builtin').live_grep({grep_open_files=true})<CR>", { desc = 'Telescope live grep buffers', silent = true })
 map('n', '<leader>fb', telescope.buffers, { desc = 'Telescope buffers', silent = true })
 map('n', '<leader>fh', telescope.help_tags, { desc = 'Telescope help tags', silent = true })
 map('n', '<leader>ft', ':TodoTelescope<CR>', { desc = 'Telescope todo comments', silent = true })

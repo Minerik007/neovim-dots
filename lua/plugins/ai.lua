@@ -10,8 +10,8 @@ return {
                 auto_trigger_ft = {},
             },
             provider = 'openai_fim_compatible',
-            n_completions = 1,
-            context_window = 512,
+            n_completions = 5,
+            context_window = 2048,
             notify = false,
             provider_options = {
                 openai_fim_compatible = {
