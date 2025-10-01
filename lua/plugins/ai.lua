@@ -9,15 +9,15 @@ return {
             virtualtext = {
                 auto_trigger_ft = {},
             },
-            provider = 'openai_fim_compatible',
+            provider = 'openai_compatible',
             n_completions = 5,
             context_window = 2048,
             notify = false,
             provider_options = {
-                openai_fim_compatible = {
+                openai_compatible = {
                     api_key = 'TERM',
                     name = 'Llama.cpp',
-                    end_point = 'http://127.0.0.1:8080/v1/completions',
+                    end_point = 'http://127.0.0.1:8080/v1/chat/completions',
                     model = 'PLACEHOLDER',
                     optional = {
                         max_tokens = 56,

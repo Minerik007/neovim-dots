@@ -40,7 +40,7 @@ yay -Sy llama.cpp-vulkan
 Then run this command to download and run AI.
 ```bash
 llama-server \
-          -hf ggml-org/Qwen2.5-Coder-1.5B-Q8_0-GGUF \
+          -hf TheBloke/OpenHermes-2.5-Mistral-7B-GGUF:Q4_K_M \
           -ngl 99 -fa -ub 1024 -b 1024 \
           --ctx-size 0 --cache-reuse 256
 ```
