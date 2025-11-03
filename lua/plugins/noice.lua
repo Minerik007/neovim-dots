@@ -1,6 +1,5 @@
 return {
-    "folke/noice.nvim",
-    event = "VeryLazy",
+    "rcarriga/nvim-notify",
     opts = {
         require("noice").setup({
             lsp = {
@@ -19,8 +18,4 @@ return {
             },
         })
     },
-    dependencies = {
-        "MunifTanjim/nui.nvim",
-        "rcarriga/nvim-notify",
-    }
 }

@@ -6,6 +6,7 @@ Dependencies:
  - Nerd Font
  - tree-sitter-cli
  - playerctl
+ - npm
  - lazygit (optional but recommended if you want to use git)
  - fortune (optional)
 
