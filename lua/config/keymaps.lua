@@ -1,6 +1,7 @@
+vim.cmd.packadd("which-key.nvim")
 local wk = require("which-key")
+vim.cmd.packadd("telescope.nvim")
 local telescope = require('telescope.builtin')
-local dap = require('dap')
 
 local map = vim.keymap.set
 
@@ -35,13 +36,6 @@ map('n', '<leader>tn', ':tabnew<CR>', { desc = 'New tab', silent = true })
 
 -- Buffers
 map('n', '<leader>bd', ':bd<CR>', { desc = 'Delete  buffer', silent = true })
-
--- AI
-map('i', '<M-a>', require('minuet.virtualtext').action.accept, { desc = 'Accept', silent = true })
-map('i', '<M-]>', require('minuet.virtualtext').action.next, { desc = 'Next', silent = true })
-map('i', '<M-[>', require('minuet.virtualtext').action.prev, { desc = 'Previous', silent = true })
-map('i', '<M-z>', require('minuet.virtualtext').action.accept_n_lines, { desc = 'Accept n lines', silent = true })
-map('i', '<M-e>', require('minuet.virtualtext').action.dismiss, { desc = 'Dismiss', silent = true })
 
 -- Save file
 map('n', '<leader>w', ':w<CR>', { desc = 'Save file', silent = true })
