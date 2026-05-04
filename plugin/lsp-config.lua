@@ -1,17 +1,10 @@
-return {
-    { "neovim/nvim-lspconfig" },
-    { "williamboman/mason.nvim" },
-    {
-        "williamboman/mason-lspconfig.nvim",
-        config = function()
-            local lspconfig = require('lspconfig')
-            local capabilities = require('cmp_nvim_lsp').default_capabilities()
+vim.pack.add({
+    'https://github.com/neovim/nvim-lspconfig',
+    'https://github.com/mason-org/mason.nvim',
+    'https://github.com/mason-org/mason-lspconfig.nvim',
+})
 
-            require('mason').setup({})
-            require('mason-lspconfig').setup({
-                automatic_enable = true,
-                ensure_installed = { 'lua_ls' }
-            })
-        end
-    },
-}
+require("mason").setup()
+require("mason-lspconfig").setup({
+  ensure_installed = { "lua_ls" }
+})

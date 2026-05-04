@@ -1,11 +1,10 @@
-return {
-    "goolord/alpha-nvim",
-    dependencies = { 'nvim-tree/nvim-web-devicons' },
-    config = function()
-        local alpha = require 'alpha'
-        local dashboard = require 'alpha.themes.dashboard'
+vim.pack.add({
+    'https://github.com/goolord/alpha-nvim',
+})
+local alpha = require 'alpha'
+local dashboard = require 'alpha.themes.dashboard'
 
-        local logo = [[
+local logo = [[
                                              
       ████ ██████           █████      ██
      ███████████             █████ 
@@ -14,18 +13,18 @@ return {
    █████████ ██████████ █████████ █████ █████ ████ █████
  ███████████ ███    ███ █████████ █████ █████ ████ █████
 ██████  █████████████████████ ████ █████ █████ ████ ██████    
-        ]]
-        
-        local minerik = [[
+]]
+
+local minerik = [[
 ███╗   ███╗██╗███╗   ██╗███████╗██████╗ ██╗██╗  ██╗
 ████╗ ████║██║████╗  ██║██╔════╝██╔══██╗██║██║ ██╔╝
 ██╔████╔██║██║██╔██╗ ██║█████╗  ██████╔╝██║█████╔╝ 
 ██║╚██╔╝██║██║██║╚██╗██║██╔══╝  ██╔══██╗██║██╔═██╗ 
 ██║ ╚═╝ ██║██║██║ ╚████║███████╗██║  ██║██║██║  ██╗
 ╚═╝     ╚═╝╚═╝╚═╝  ╚═══╝╚══════╝╚═╝  ╚═╝╚═╝╚═╝  ╚═╝
-        ]]
+]]
 
-        local logo2 = [[
+local logo2 = [[
  ███▄    █ ▓█████  ▒█████   ██▒   █▓ ██▓ ███▄ ▄███▓
  ██ ▀█   █ ▓█   ▀ ▒██▒  ██▒▓██░   █▒▓██▒▓██▒▀█▀ ██▒
 ▓██  ▀█ ██▒▒███   ▒██░  ██▒ ▓██  █▒░▒██▒▓██    ▓██░
@@ -35,8 +34,8 @@ return {
 ░ ░░   ░ ▒░ ░ ░  ░  ░ ▒ ▒░    ░ ░░   ▒ ░░  ░      ░
    ░   ░ ░    ░   ░ ░ ░ ▒       ░░   ▒ ░░      ░   
          ░    ░  ░    ░ ░        ░   ░         ░   
-         ]]
-        local flowey = [[
+]]
+local flowey = [[
 █████████████▀▀▀▀▀███████▀▀▀▀▀█████████████
 █████████▀░░▀▀█▄▄▄▄▄▄██▄▄▄▄▄▄█▀░░▀█████████
 ████████▄░░▄▄████▀▀▀▀▀▀▀▀▀████▄▄░░▄████████
@@ -56,9 +55,9 @@ return {
 ██████████████████░░░▀█████████████████████
 ███████████████████▄░░░████████████████████
 █████████████████████░░░███████████████████ 
-        ]]
+]]
 
-        local papyrus2 = [[
+local papyrus2 = [[
                                   ...........................`                                  
                                  `mNNNNNNNNNNNNNNNNNNNNNNNNNN-                                  
                                ohdMMMMMMMMMMMMMMMMMMMMMMMMMMMdhy                                
@@ -104,9 +103,9 @@ return {
     ++sMMMMMMMMMMMMMhso.       hMMMMmssssssssssssssssssyMMMMMs++     yMMMMmo+:  +ssMMMMMMMMMMMMM
       -NMMMMMMMMMMMMMMM/..     smmmmmmmmmmmmmmmmmmmmmmmmmmmmd-    `..yMMMMd`    dMMMMMMMMMMMMMMM
       -NMMMMMMMMMMMMMMMMMm`                                       /MMMMMMMd`    dMMMMMMMMMMMMMMM
-        ]]
+]]
 
-        local papyrus = [[
+local papyrus = [[
                            +NMMMMMMMMMN+                                        
                         `/NMMMMMMMMMMMMMN+`                                     
                       `/d+ohMMMMMMMMMMMMMMm+`                                   
@@ -164,8 +163,8 @@ return {
          -dMMMMMMMMMMMMMMMMMMMM/          yNMMMMMMMMMMMMMMMMMMMd                
          -NMMMMMMMMMMMMMMNN////.           hNNNNNNMMMMMMMMMMMMMh                
           `+++++++++++++/                        .++++++++++++:
-        ]]
-        local italian = [[
+]]
+local italian = [[
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣴⣾⡿⠿⢿⣿⣶⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣀⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⡿⠋⠀⠀⠀⠀⠈⠙⠿⣿⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⣴⣾⣿⣿⡿⠿⣿⣶⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
@@ -208,26 +207,24 @@ return {
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣠⣴⡾⠿⠛⠋⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣴⡿⠛⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⠻⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-        ]]
+]]
 
-        dashboard.section.header.val = vim.split(logo2, '\n')
-        dashboard.section.header.opts.hl = "Directory"
-        dashboard.section.buttons.val = {
-            dashboard.button('n', '  New file', ':ene <BAR> startinsert <CR>'),
-            dashboard.button('e', '󰷏  File browser', ':Telescope file_browser <CR>'),
-            dashboard.button('f', '  Find file', ':Telescope find_files <CR>'),
-            dashboard.button('t', '  Find text', ':Telescope live_grep <CR>'),
-            dashboard.button('r', '󰄉  Recent files', ':Telescope oldfiles <CR>'),
-            dashboard.button('u', '󱐥  Update', '<cmd>Lazy update<CR>'),
-            dashboard.button('c', '  Config', ':cd $HOME/.config/nvim | silent Telescope find_files <CR>'),
-            dashboard.button('q', '󰿅  Quit', '<cmd>qa<CR>'),
-        }
-        local handle = io.popen("fortune -c | sed '2d'")
-        local result = handle:read("*a")
-        handle:close()
-        dashboard.section.footer.val = result
-
-        dashboard.opts.opts.noautocmd = true
-        alpha.setup(dashboard.opts)
-    end,
+dashboard.section.header.val = vim.split(logo2, '\n')
+dashboard.section.header.opts.hl = "Directory"
+dashboard.section.buttons.val = {
+    dashboard.button('n', '  New file', ':ene <BAR> startinsert <CR>'),
+    dashboard.button('e', '󰷏  File browser', ':Telescope file_browser <CR>'),
+    dashboard.button('f', '  Find file', ':Telescope find_files <CR>'),
+    dashboard.button('t', '  Find text', ':Telescope live_grep <CR>'),
+    dashboard.button('r', '󰄉  Recent files', ':Telescope oldfiles <CR>'),
+    dashboard.button('u', '󱐥  Update', '<cmd>Lazy update<CR>'),
+    dashboard.button('c', '  Config', ':cd $HOME/.config/nvim | silent Telescope find_files <CR>'),
+    dashboard.button('q', '󰿅  Quit', '<cmd>qa<CR>'),
 }
+local handle = io.popen("fortune -c | sed '2d'")
+local result = handle:read("*a")
+handle:close()
+dashboard.section.footer.val = result
+
+dashboard.opts.opts.noautocmd = true
+alpha.setup(dashboard.opts)

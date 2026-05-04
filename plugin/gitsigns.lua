@@ -1,7 +1,4 @@
-return {
-    'echasnovski/mini.nvim',
-    version = '*',
-    config = function ()
-        require('mini.diff').setup()
-    end
-}
+vim.pack.add({
+    'https://github.com/nvim-mini/mini.diff'
+})
+require('mini.diff').setup()
