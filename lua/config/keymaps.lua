@@ -10,9 +10,7 @@ wk.add({
     { "<leader>f", desc = "Search" },
     { "<leader>c", desc = "LSP" },
     { "<leader>g", desc = "git" },
-    { "<leader>l", desc = "Lazy" },
     { "<leader>t", desc = "Tabs"},
-    { "<leader>d", desc = "Debug"},
     { "<leader>b", desc = "Buffers"},
 })
 
