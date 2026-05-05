@@ -16,7 +16,7 @@ require("tree-sitter-manager").setup({
             },
         },
     },
-    ensure_installed = { "norg", "norg_meta", "lua", "markdown", "query" },
+    ensure_installed = { "bash", "norg", "norg_meta", "lua", "markdown", "query" },
     auto_install = true,
 
     -- Default Options
@@ -27,4 +27,11 @@ require("tree-sitter-manager").setup({
     -- languages = {}, -- override or add new parser sources
     -- parser_dir = vim.fn.stdpath("data") .. "/site/parser",
     -- query_dir = vim.fn.stdpath("data") .. "/site/queries",
+})
+
+vim.filetype.add({
+    extension = {
+        ebuild = 'bash',
+        conf = 'bash',
+    }
 })

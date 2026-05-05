@@ -5,6 +5,10 @@ vim.opt.expandtab = true
 vim.opt.shiftwidth = 4 -- the number of spaces inserted for each indentation
 vim.opt.tabstop = 4 -- insert 4 spaces for a tab
 vim.opt.smartindent = true
+vim.api.nvim_create_autocmd({"BufRead", "BufNewFile"}, {
+  pattern = {"*"},
+  command = "setlocal expandtab"
+})
 
 vim.opt.clipboard = "unnamedplus" -- clipboard sync
 vim.opt.confirm = true

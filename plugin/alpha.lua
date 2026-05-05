@@ -217,14 +217,14 @@ dashboard.section.buttons.val = {
     dashboard.button('f', '  Find file', ':Telescope find_files <CR>'),
     dashboard.button('t', '  Find text', ':Telescope live_grep <CR>'),
     dashboard.button('r', '󰄉  Recent files', ':Telescope oldfiles <CR>'),
-    dashboard.button('u', '󱐥  Update', '<cmd>Lazy update<CR>'),
+    dashboard.button('u', '󱐥  Update', '<cmd>lua vim.pack.update()<CR>'),
     dashboard.button('c', '  Config', ':cd $HOME/.config/nvim | silent Telescope find_files <CR>'),
     dashboard.button('q', '󰿅  Quit', '<cmd>qa<CR>'),
 }
-local handle = io.popen("fortune -c | sed '2d'")
-local result = handle:read("*a")
-handle:close()
-dashboard.section.footer.val = result
+-- local handle = io.popen("fortune -c | sed '2d'")
+-- local result = handle:read("*a")
+-- handle:close()
+-- dashboard.section.footer.val = result
 
 dashboard.opts.opts.noautocmd = true
 alpha.setup(dashboard.opts)
