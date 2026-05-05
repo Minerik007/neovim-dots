@@ -3,6 +3,8 @@ vim.pack.add({
 })
 require('mini.trailspace').setup()
 
+vim.b.minitrailspace_disable = true
+
 vim.api.nvim_create_autocmd("BufWritePre", {
   pattern = "*",
   callback = function()

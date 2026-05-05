@@ -1,28 +1,29 @@
-return {
-    {
-        "nvim-neorg/neorg",
-        lazy = false, -- Disable lazy loading as some `lazy.nvim` distributions set `lazy = true` by default
-        version = "*", -- Pin Neorg to the latest stable release
-        config = function ()
-            require("neorg").setup({
-                load = {
-                    ["core.defaults"] = {},
-                    ["core.latex.renderer"] = {
-                        config = {
-                            conceal = true,
-                            render_on_enter = true,
-                        }
-                    },
-                    ["core.concealer"] = {},
-                    ["core.dirman"] = {
-                        config = {
-                            workspaces = {
-                                notes = "~/Documents/Notes",
-                            },
-                        },
-                    },
+vim.pack.add({
+    'https://github.com/pysan3/pathlib.nvim',
+    'https://github.com/nvim-neotest/nvim-nio',
+    'https://github.com/3rd/image.nvim',
+    'https://github.com/nvim-neorg/lua-utils.nvim',
+    'https://github.com/nvim-neorg/neorg',
+})
+require("neorg").setup({
+    load = {
+        ["core.defaults"] = {},
+        ["core.latex.renderer"] = {
+            config = {
+                conceal = true,
+                render_on_enter = true,
+            }
+        },
+        ["core.concealer"] = {},
+        ["core.dirman"] = {
+            config = {
+                workspaces = {
+                    notes = "~/Documents/Notes",
                 },
-            })
-        end
+            },
+        },
+        ["core.integrations.treesitter"] = {
+            configure_parsers = true
+        }
     },
-}
+})
