@@ -2,6 +2,7 @@ vim.cmd.packadd("which-key.nvim")
 local wk = require("which-key")
 vim.cmd.packadd("telescope.nvim")
 local telescope = require('telescope.builtin')
+vim.cmd.packadd("smart-splits")
 
 local map = vim.keymap.set
 
@@ -65,3 +66,20 @@ map('n', '<leader>ca', vim.lsp.buf.code_action, { desc = 'Code action', silent =
 
 -- LazyGit
 map('n', '<leader>gg', ':LazyGit<CR>', { desc = "LazyGit", silent = true })
+
+-- Smart Splits
+map('n', '<A-h>', require('smart-splits').resize_left, { desc = 'Resize Buffer Left' })
+map('n', '<A-j>', require('smart-splits').resize_down, { desc = 'Resize Buffer Down' })
+map('n', '<A-k>', require('smart-splits').resize_up, { desc = 'Resize Buffer Up' })
+map('n', '<A-l>', require('smart-splits').resize_right, { desc = 'Resize Buffer Right' })
+-- moving between splits
+map('n', '<C-h>', require('smart-splits').move_cursor_left, { desc = 'Move Cursor Left' })
+map('n', '<C-j>', require('smart-splits').move_cursor_down, { desc = 'Move Cursor Down' })
+map('n', '<C-k>', require('smart-splits').move_cursor_up, { desc = 'Move Cursor Up' })
+map('n', '<C-l>', require('smart-splits').move_cursor_right, { desc = 'Move Cursor Right' })
+map('n', '<C-\\>', require('smart-splits').move_cursor_previous, { desc = 'Swap Buffer Previous' })
+-- swapping buffers between windows
+map('n', '<leader><leader>h', require('smart-splits').swap_buf_left, { desc = 'Swap Buffer Left' })
+map('n', '<leader><leader>j', require('smart-splits').swap_buf_down, { desc = 'Swap Buffer Down' })
+map('n', '<leader><leader>k', require('smart-splits').swap_buf_up, { desc = 'Swap Buffer Up' })
+map('n', '<leader><leader>l', require('smart-splits').swap_buf_right, { desc = 'Swap Buffer Right' })
