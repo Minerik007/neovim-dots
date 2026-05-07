@@ -64,9 +64,6 @@ map('n', 'K', vim.lsp.buf.hover, { silent = true })
 map('n', 'gd', vim.lsp.buf.definition, { desc = 'Definition', silent = true })
 map('n', '<leader>ca', vim.lsp.buf.code_action, { desc = 'Code action', silent = true })
 
--- LazyGit
-map('n', '<leader>gg', ':LazyGit<CR>', { desc = "LazyGit", silent = true })
-
 -- Smart Splits
 map('n', '<A-h>', require('smart-splits').resize_left, { desc = 'Resize Buffer Left' })
 map('n', '<A-j>', require('smart-splits').resize_down, { desc = 'Resize Buffer Down' })
