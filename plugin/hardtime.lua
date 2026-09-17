@@ -3,4 +3,4 @@ vim.pack.add({
     'https://github.com/m4xshen/hardtime.nvim',
     'https://github.com/unblevable/quick-scope',
 })
-require("hardtime").setup()
+-- require("hardtime").setup()

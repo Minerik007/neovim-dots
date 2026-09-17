@@ -2,4 +2,8 @@ vim.pack.add({
     'https://github.com/MunifTanjim/nui.nvim',
     'https://github.com/folke/noice.nvim',
 })
-require("noice").setup({})
+require("noice").setup({
+    presets = {
+        lsp_doc_border = true,
+    },
+})

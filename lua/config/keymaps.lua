@@ -10,9 +10,9 @@ local map = vim.keymap.set
 wk.add({
     { "<leader>f", desc = "Search" },
     { "<leader>c", desc = "LSP" },
-    { "<leader>g", desc = "git" },
     { "<leader>t", desc = "Tabs"},
     { "<leader>b", desc = "Buffers"},
+    { "<leader>n", desc = "Neorg"},
 })
 
 -- Define keymaps
@@ -40,8 +40,9 @@ map('n', '<leader>bd', ':bd<CR>', { desc = 'Delete  buffer', silent = true })
 map('n', '<leader>w', ':w<CR>', { desc = 'Save file', silent = true })
 
 -- Neorg
-map('n', '<leader>n', ':Neorg workspace notes<CR>', { desc = 'Neorg Notes', silent = true })
-
+map('n', '<leader>nn', ':Neorg workspace notes<CR>', { desc = 'Neorg Notes', silent = true })
+map('n', '<leader>nt', function() vim.cmd('Neorg workspace dreams') vim.defer_fn(function() vim.cmd('Neorg journal today') end, 100) end, { desc = 'Neorg Dream Journal Today', silent = true })
+map('n', '<leader>nd', function() vim.cmd('Neorg workspace notes') vim.defer_fn(function() vim.cmd('Neorg journal today') end, 100) end, { desc = 'Neorg Today Notes', silent = true })
 
 -- Screenshot
 map('v', '<leader>s', function() require("nvim-silicon").clip() end, { desc = 'Screenshot Code', silent = true })

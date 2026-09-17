@@ -3,7 +3,7 @@ vim.pack.add({
     'https://github.com/L3MON4D3/LuaSnip',
     'https://github.com/rafamadriz/friendly-snippets',
     'https://github.com/saghen/blink.lib',
-    'https://github.com/saghen/blink.cmp',
+    { src = 'https://github.com/Saghen/blink.cmp', version = vim.version.range('*') },
     'https://github.com/onsails/lspkind.nvim',
 })
 

@@ -19,6 +19,7 @@ require("neorg").setup({
             config = {
                 workspaces = {
                     notes = "~/Documents/Notes",
+                    dreams = "~/Documents/Dreams",
                 },
             },
         },

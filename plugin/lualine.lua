@@ -17,6 +17,15 @@ local function fancy_mode()
     local current_mode = vim.api.nvim_get_mode().mode
     return mode_map[current_mode] or current_mode
 end
+
+local function macro_component()
+    local reg = vim.fn.reg_recording()
+    if reg ~= "" then
+        return "recording @" .. reg
+    end
+    return ""
+end
+
 require('lualine').setup({
     options = {
         globalstatus = true,
@@ -25,7 +34,7 @@ require('lualine').setup({
         lualine_a = { fancy_mode },
         lualine_b = { 'branch', 'diff' },
         lualine_c = { 'diagnostics', 'filename' },
-        lualine_x = { 'encoding', 'fileformat', 'filetype' },
+        lualine_x = { macro_component, 'encoding', 'fileformat', 'filetype' },
         lualine_y = { 'progress' },
         lualine_z = { 'location' }
     }
