@@ -141,6 +141,11 @@
       "rev": "59e1ba49e33e1b73bef655fd34b5e65e1465053f",
       "src": "https://github.com/romus204/tree-sitter-manager.nvim"
     },
+    "vimtex": {
+      "rev": "9f6a5bb0a9c9f1542fe88dc07511ce8401242e2a",
+      "src": "https://github.com/lervag/vimtex",
+      "version": "'v2.15'"
+    },
     "which-key.nvim": {
       "rev": "3aab2147e74890957785941f0c1ad87d0a44c15a",
       "src": "https://github.com/folke/which-key.nvim"

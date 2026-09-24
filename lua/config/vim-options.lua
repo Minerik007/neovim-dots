@@ -1,5 +1,5 @@
 vim.g.mapleader = " " -- leader key
-vim.g.maplocalleader = "+"
+vim.g.maplocalleader = ","
 
 vim.opt.expandtab = true
 vim.opt.shiftwidth = 4 -- the number of spaces inserted for each indentation
