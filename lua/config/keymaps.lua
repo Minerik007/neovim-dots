@@ -26,6 +26,7 @@ map('n', '<leader>fh', telescope.help_tags, { desc = 'Telescope help tags', sile
 map('n', '<leader>ft', ':TodoTelescope<CR>', { desc = 'Telescope todo comments', silent = true })
 map('n', '<leader>fe', ":Telescope file_browser<CR>", { desc = 'Telescope file browser', silent = true })
 map('n', '<leader>fd', telescope.lsp_document_symbols, { desc = 'Telescope list symbols', silent = true })
+map('n', 'z=', telescope.spell_suggest)
 
 -- Tabs
 map('n', '<leader>tt', ':ToggleTerm<CR>', { desc = "Open terminal", silent = true })
@@ -46,9 +47,6 @@ map('n', '<leader>nd', function() vim.cmd('Neorg workspace notes') vim.defer_fn(
 
 -- Screenshot
 map('v', '<leader>s', function() require("nvim-silicon").clip() end, { desc = 'Screenshot Code', silent = true })
-
--- Make it rain!
-map('n', '<leader>z', ':CellularAutomaton make_it_rain<CR>', { desc = 'Make it rain!', silent = true })
 
 -- Open Dashboard
 map('n', '<leader>;', ':Alpha<CR>', { desc = 'Open Dashboard', silent = true })

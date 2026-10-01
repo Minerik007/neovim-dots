@@ -1,19 +1,22 @@
 # A True Intergalactic Experience
+
 My awesome Neovim config ✨
 
-# Installation for Linux:
-Dependencies:
- - Nerd Font
- - tree-sitter-cli
- - playerctl
- - npm
- - lazygit (optional but recommended if you want to use git)
- - fortune (optional)
+# Installation for Linux
+
+## Dependencies
+
+- Nerd Font
+- tree-sitter-cli
+- LaTeX
+- lazygit (optional but recommended if you want to use git)
+- Ollama (optional)
 
 > [!WARNING]
 > You need to install these dependencies or my config will not work as expected.
 
 ### Make a backup of your current Neovim files.
+
 ```bash
 # required
 mv ~/.config/nvim{,.bak}
@@ -25,31 +28,25 @@ mv ~/.cache/nvim{,.bak}
 ```
 
 ### Clone my config.
+
 ```bash
-cd ~/.config/nvim & git clone https://github.com/Minerik007/neovim-dots .
+cd ~/.config/nvim && git clone https://github.com/Minerik007/neovim-dots .
 ```
 
 ### Remove the `.git` folder, so you can add it to your own repo later
+
 ```bash
 rm -rf ~/.config/nvim/.git
 ```
-### AI (optional)
-If you want AI virtual text you need to download Llama.cpp
-```bash
-yay -Sy llama.cpp-vulkan
-```
-Then run this command to download and run AI.
-```bash
-llama-server \
-          -hf TheBloke/OpenHermes-2.5-Mistral-7B-GGUF:Q4_K_M \
-          -ngl 99 -fa -ub 1024 -b 1024 \
-          --ctx-size 0 --cache-reuse 256
-```
-> [!WARNING]
-> Maybe you need to change llama-server settings to match your setup. It can cause system freeze or lag otherwise.
 
-And now you can start Neovim.
-If you encounter any issues please [report it](https://github.com/Minerik007/neovim-dots/issues/new) 
+### AI (optional)
+
+If you want AI code review, you need to download Ollama, install your preferred model, and add your model name to `./plugin/gen.lua`.
+
+You are now ready to start Neovim.
+
+If you encounter any issues, please [report it](https://github.com/Minerik007/neovim-dots/issues/new).
 
 # Debuggers
-The [Debug-Adapter Installation](https://github.com/mfussenegger/nvim-dap/wiki/Debug-Adapter-installation) wiki is beautiful guide for installation and configuration of debbugers. Configuration please put into user options file. It is located in 'nvim/lua/config/options.lua'. And if you want only code snippets with LSP use ':Mason' command and select your prefered LSP.
+
+The [Debug-Adapter Installation](https://github.com/mfussenegger/nvim-dap/wiki/Debug-Adapter-installation) wiki is a beautiful guide for the installation and configuration of debuggers. Please configure these in your user options file. It is located in `nvim/lua/config/options.lua`. If you want to use only code snippets with LSP, use the `:Mason` command and select your preferred LSP.
